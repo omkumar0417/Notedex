@@ -109,7 +109,7 @@ h1 {
     margin: 10px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Darker shadow */
-    width: 45%; /* Adjust width for better alignment */
+    width: calc(50% - 40px); /* Adjust width for better alignment and spacing */
     box-sizing: border-box;
     vertical-align: top;
     transition: transform 0.3s; /* Add transition for hover effect */
@@ -482,8 +482,7 @@ h1 {
     }
 
     #subjects-container td {
-        width: 100%;
-        padding: 15px;
+        width: calc(100% - 40px); /* Full width for smaller screens */
     }
 
     .footer {
