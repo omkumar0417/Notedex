@@ -101,12 +101,8 @@ function showSubjects(semester) {
     const subjects = subjectsData[semester];
     if (subjects) {
         const table = document.createElement('table');
-        let row;
         subjects.forEach((subject, index) => {
-            if (index % 2 === 0) {
-                row = document.createElement('tr');
-                table.appendChild(row);
-            }
+            const row = document.createElement('tr');
             const cell = document.createElement('td');
             cell.innerHTML = `
                 <div class="subject-card" onclick="showSubjectDetails(${semester}, ${index})">
@@ -115,6 +111,7 @@ function showSubjects(semester) {
                 </div>
             `;
             row.appendChild(cell);
+            table.appendChild(row);
         });
         subjectsContainer.appendChild(table);
     } else {
